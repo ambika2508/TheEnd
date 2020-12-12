@@ -70,15 +70,15 @@ function draw()
   //invisibleGround.debug = true;
   //ground.debug = true;
   text("Score: "+ score, 500,20);
-  ground.setCollider("rectangle",0,0,ground.width,5);
+  //ground.setCollider("rectangle",0,0,ground.width,5);
   //invisibleGround.setCollider("rectangle",0,0,invisibleGround.width,5);
  
   if(gameState===PLAY)
   {
     score = score + Math.round(getFrameRate()/60);
     ground.velocityX = -(6+3*score/100);
-    camera.position.x = 300;
-  camera.position.y = 100;
+      camera.position.x = 300;
+     camera.position.y = 100;
 
   
     if(keyDown("space") && trex.y>=144) 
