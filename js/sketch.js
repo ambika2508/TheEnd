@@ -32,9 +32,7 @@ function preload()
 function setup()
 {
   createCanvas(600, 200);
-  camera.position.x = 300;
-  camera.position.y = 100;
-
+  
   trex = createSprite(50,160,20,50);
   trex.addAnimation("running", trex_running);
   trex.addAnimation("collided",trex_collided);
@@ -79,6 +77,9 @@ function draw()
   {
     score = score + Math.round(getFrameRate()/60);
     ground.velocityX = -(6+3*score/100);
+    camera.position.x = 300;
+  camera.position.y = 100;
+
   
     if(keyDown("space") && trex.y>=144) 
     {
