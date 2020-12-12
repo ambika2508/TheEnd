@@ -54,8 +54,8 @@ function setup()
   restart.scale = 0.5;
   restart.visible = false;
   
-  invisibleGround = createSprite(200,165,400,10);
-  invisibleGround.visible = false;
+  //invisibleGround = createSprite(200,165,400,10);
+  //invisibleGround.visible = false;
   
   cloudsGroup = new Group();
   obstaclesGroup = new Group();
@@ -71,7 +71,7 @@ function draw()
   //ground.debug = true;
   text("Score: "+ score, 500,20);
   ground.setCollider("rectangle",0,0,ground.width,5);
-  invisibleGround.setCollider("rectangle",0,0,invisibleGround.width,5);
+  //invisibleGround.setCollider("rectangle",0,0,invisibleGround.width,5);
  
   if(gameState===PLAY)
   {
